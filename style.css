@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitter:ital,wght@0,700;0,800;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.cdnfonts.com/css/games');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-right:20px;
+    padding-left:20px;
+} 
+/* smull */
+/* @media  (min-width: 650px){
+    .container{
+        width: 350px;
+    }
+    /* .container .block .box ul li{
+        height: 100px;
+    } */
+/* }  */
+@media  (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+    /* .container .block .box ul li{
+        height: 150px;
+    } */
+}
+/* medium */
+@media (min-width: 992px){
+    .container{
+            width: 970px;
+    }
+    /* .container .block .box ul li{
+        height: 250px;
+    } */
+}
+/*long */
+@media  (min-width: 1200px){
+    .container{
+        width: 1170px;
+        
+    }
+    /* .container .block .box ul li{
+        height: 350px;
+    } */
+}
+body{
+    max-width: 100vw;
+    max-height: 100vh;
+    background-color: #4e5d7c;
+    /* background-color: aqua; */
+}
+.container{
+    height: 100%;
+
+}
+/* backgroun start game  */
+.back-st{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-image: url(img/background01.png);
+}
+.back-win{    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-image: url(img/abebecfa89b646448c834963627b325d-512x384-1.jpeg);
+}
+.blur{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.blur::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.537);
+    width: 100%;
+    height: 100%;
+}
+.body-st{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: calc(100% - 200px);
+    left: 100px;
+    height: fit-content;
+    font-size: 35px;
+    background-color: #4e5d7c;
+    color: #fff;
+    padding: 50px 25px ;
+    border-radius: 15px
+}
+.body-st h1{
+    font-family: 'Bitter', serif;
+    /* font-family: 'Bebas Neue', cursive; */
+    color: rgb(54, 41, 73);
+    margin-bottom: 50PX;
+    
+}
+.body-st  button{
+    /* display: none; */
+    padding: 20PX 50px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #f1b05c;
+    border-radius: 20px;
+    background-color: rgb(145, 58, 58);
+    cursor: pointer;
+}
+.back-st .body-st .chosi{
+    display: none;
+}
+.back-st .body-st .chosi .ch-click{
+    padding: 20px 40px;
+    background-color: rgb(151, 83, 83);
+    margin-left: 50px;
+    border: 2px solid black;
+    border-radius:35px;
+    cursor: pointer;
+    box-shadow:  10px 10px 10px rgb(77, 79, 80);
+}
+.back-st .body-st .chosi .ch-click.one{
+    background-color: rgb(200, 153, 51);
+}
+.back-st .body-st .chosi .ch-click.two{
+    background-color: rgb(36, 166, 96);
+}
+.back-st .body-st .with-pc{
+    display: none;
+}
+.back-st .body-st .with-pc span{
+    width: 300px;
+    background-color: rgb(83, 57, 98);
+    margin: 20px auto;
+    padding: 20PX 40Px;
+    border-radius: 20px;
+    border: 4px solid violet;
+    cursor: pointer;
+    letter-spacing: 2px;
+    display: block;
+}
+/* end background */
+.container .title{
+    font-size: 80px;
+    font-weight: 900;
+    font-family: 'Games', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    color: #784343e3;
+    letter-spacing: 7px;
+}
+.container .block{
+    border: 4px rgb(134, 129, 115);
+    border-style: groove;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: rgb(238, 230, 221);
+
+}
+.container .block .box{
+    background-color: rgb(219, 247, 238);
+    color: chocolate;
+    
+}
+.container .block .box ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+.container .block .box ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: cadetblue;
+    position: relative;
+    color: white;
+    font-size: 120px;
+    cursor: pointer;
+}.container .block.no-click,
+.container .block .box ul li.no-click{
+    pointer-events: none;
+}
+/* .ruslt{
+display: flex;
+justify-content: space-between;
+width: 100%;
+background-color: #e1e1ac;
+border-radius: 20px;
+border: 2px rgb(182, 200, 87) solid;
+border-bottom: none;
+padding: 20px;
+}
+.ruslt .titles{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(126 126 165);
+    margin-bottom: 10px;
+
+}
+.ruslt .titles .winX{
+    margin-right: 20px;
+} */
+.ruslt :last-child{
+/* margin-right: 20px; */
+}
+.replay{
+    position: fixed;
+    top: 90%;
+    left: 90%;
+}
+.replay button{
+    width: fit-content;
+    padding: 20px 35px;
+    border-radius: 20px;
+    font-size: 22px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    background-color: #b14b3b;
+}
